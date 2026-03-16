@@ -68,6 +68,41 @@ h1, h2, h3, h4, .gold-text {
   font-family: 'Cormorant Garamond', serif;
 }
 
+/* Navigation Styles - Integrated */
+.main-nav {
+  margin: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #cfb046;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #cfb046;
+}
+
 .owner-tag {
   font-size: 1.1rem;
 }
@@ -96,7 +131,7 @@ h1, h2, h3, h4, .gold-text {
 
 .hero-content {
   max-width: 800px;
-  background-image: url("images/Photo%2025-01-2026%2C%2010%2013%2051.jpg");
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -389,6 +424,23 @@ h1, h2, h3, h4, .gold-text {
   margin: 6px 0;
 }
 
+/* Footer Navigation */
+.footer-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-nav a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-nav a:hover {
+  color: #cfb046;
+}
+
 .footer-social {
   display: flex;
   gap: 24px;
@@ -404,10 +456,37 @@ h1, h2, h3, h4, .gold-text {
   color: #cfb046;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE STYLES ===== */
+/* Large Tablets */
+@media (max-width: 992px) {
+  .header-container {
+    justify-content: center;
+  }
+  
+  .main-nav {
+    order: 3;
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .owner-tag {
+    margin-left: auto;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
   }
   
   .section-title {
@@ -441,20 +520,174 @@ h1, h2, h3, h4, .gold-text {
   .services-grid {
     grid-template-columns: 1fr;
   }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .footer-nav {
+    justify-content: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
 }
 
+/* Mobile Phones */
 @media (max-width: 480px) {
   .header-container {
     flex-direction: column;
     text-align: center;
   }
   
+  .logo-area {
+    justify-content: center;
+  }
+  
+  .logo-img {
+    height: 60px;
+  }
+  
+  .main-nav {
+    margin: 10px 0;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  
+  .owner-tag {
+    font-size: 1rem;
+  }
+  
+  .hero {
+    min-height: 400px;
+  }
+  
   .hero-title {
     font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  
+  .btn {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .filter-sort-bar {
+    padding: 15px;
+  }
+  
+  .filter-group, .sort-group {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .filter-group label, .sort-group label {
+    margin-bottom: 5px;
+  }
+  
+  .service-card {
+    padding: 20px 16px;
+  }
+  
+  .service-name {
+    font-size: 1.5rem;
   }
   
   .price-row {
     flex-direction: column;
     gap: 4px;
+  }
+  
+  .price-label {
+    font-size: 0.9rem;
+  }
+  
+  .price-value {
+    font-size: 1.1rem;
+  }
+  
+  .service-features li {
+    font-size: 0.9rem;
+  }
+  
+  .terms-note {
+    padding: 18px;
+    font-size: 0.85rem;
+  }
+  
+  .owner-info h3 {
+    font-size: 1.8rem;
+  }
+  
+  .owner-role {
+    font-size: 0.9rem;
+  }
+  
+  .owner-bio {
+    font-size: 0.9rem;
+  }
+  
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-nav a {
+    font-size: 0.9rem;
+  }
+  
+  .footer-social {
+    gap: 20px;
+  }
+  
+  .footer-social a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 360px) {
+  .nav-links {
+    gap: 10px;
+  }
+  
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .service-name {
+    font-size: 1.3rem;
+  }
+  
+  .service-badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
   }
 }

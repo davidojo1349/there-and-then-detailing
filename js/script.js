@@ -114,7 +114,7 @@ function sortServices(data, sortBy) {
   }
 }
 
-// Generate HTML for a single service card
+// Generate HTML for a single service card - UPDATED with contact page link
 function createServiceCard(service) {
   const priceRows = Object.entries(service.prices).map(([size, price]) => `
     <div class="price-row">
@@ -139,7 +139,7 @@ function createServiceCard(service) {
       <ul class="service-features">
         ${featuresList}
       </ul>
-      <a href="#" class="btn" onclick="alert('Booking inquiry for ${service.name} – Gift will be in touch!'); return false;">Enquire Now</a>
+      <a href="contact.html" class="btn">Enquire Now</a>
     </div>
   `;
 }
