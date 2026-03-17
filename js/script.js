@@ -5,7 +5,7 @@ const serviceData = [
     id: 1,
     name: 'Lowkey',
     category: 'Lowkey',
-    prices: { small: 25, medium: 30, large: 35 },
+    prices: { small: 30, medium: 35, large: 40 },
     features: [
       'Prewash',
       'Handwash',
@@ -18,7 +18,7 @@ const serviceData = [
     id: 2,
     name: 'Midrange',
     category: 'Midrange',
-    prices: { small: 35, medium: 45, large: 55 },
+    prices: { small: 45, medium: 50, large: 55 },
     features: [
       'Prewash',
       'Snow Foam',
@@ -33,7 +33,7 @@ const serviceData = [
     id: 3,
     name: 'High Spec',
     category: 'High Spec',
-    prices: { small: 55, medium: 75, large: 85 },
+    prices: { small: 60, medium: 80, large: 100 },
     features: [
       'Prewash',
       'Snow Foam',
